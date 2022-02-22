@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+    box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-container {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
 }
-
-.App-link {
-  color: #61dafb;
+@media (max-width: 720px) {
+    .main-container {
+        width: 90vw;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    height: calc(100vh - 120px);
+    overflow: auto;
 }
+.form-title {
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+.error-txt {
+    color: tomato;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.form-control {
+    width: 100%;
+    padding: 10px 0;
+}
+.form-control label {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.form-control .form-btn {
+    border: 1px solid #000;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    transition: all 100ms ease-in-out;
+}
+.form-control .form-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.form-control .form-btn:disabled,
+.form-control .form-btn:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.712);
+    color: #fff;
+    cursor: not-allowed;
+}
+.feed-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+}
+.feed {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.container::-webkit-scrollbar,
+.feed::-webkit-scrollbar {
+    display: none;
+}
+.post-container {
+    margin: auto;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.post-container h2 {
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.post-container p {
+    padding-top: 10px;
+}
+.main-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.text-muted {
+    padding-top: 10px;
+    color: rgb(107, 107, 107);
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.text-muted span {
+    text-transform: capitalize;
+}
+.footer {
+    display: flex;
+    margin: auto;
+    height: 50px;
+    border-top: 1px solid #ccc;
+    justify-content: center;
+    z-index: 10;
+    align-items: center;
+}
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    transition: transform 100ms linear;
+}
+.btn:hover {
+    transform: scale(1.2);
+}
+.btn-delete {
+    color: tomato;
+}
+/* .page-btn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: #495371;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.page-btn:disabled {
+    background-color: #4953719f;
+    cursor: not-allowed;
+} */

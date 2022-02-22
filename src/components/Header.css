@@ -1,0 +1,20 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px #ccc solid;
+}
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    cursor: pointer;
+}
